@@ -84,32 +84,31 @@
   </header>
 
   <main class="flex-grow">
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-50">
+    <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-slate-50">
       <!-- Background Accents -->
-      <div class="absolute top-0 left-0 w-full h-full -z-10 parallax-bg">
-        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-brand-navy/5 blur-[120px] rounded-full"></div>
-        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-gold/10 blur-[120px] rounded-full"></div>
+      <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-slate-100 to-white">
+        <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-brand-navy/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-brand-gold/10 blur-[120px] rounded-full"></div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div class="fade-in-up">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold-dark text-xs font-bold uppercase tracking-widest mb-8">
-            <i data-lucide="zap" class="w-4 h-4"></i> Established 2023
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="fade-in-up text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold-dark text-xs font-bold uppercase tracking-widest mb-8">
+            <i data-lucide="zap" class="w-4 h-4"></i> Nigeria's Leading Tech Hub
           </div>
-          <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 text-brand-navy tracking-tight md:tracking-tighter">
+          <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[84px] font-display font-bold leading-[1.05] md:leading-[1.1] mb-8 text-brand-navy tracking-tight">
             Building Digital <br class="hidden sm:block" />
             <span class="text-brand-gold">Infrastructure</span> <br class="hidden sm:block" />
             for Africa.
           </h1>
-          <p class="text-xl text-slate-500 mb-12 max-w-xl leading-relaxed">
+          <p class="text-lg md:text-xl text-slate-500 mb-10 md:mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             Empowering SMEs to operate efficiently, scale confidently, and compete in a modern digital economy.
           </p>
-          <div class="flex flex-wrap gap-6">
-            <a href="#products" class="btn-primary">
+          <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
+            <a href="#products" class="btn-primary py-4 px-10 text-base">
               Explore Solutions <i data-lucide="chevron-right" class="w-5 h-5 ml-2"></i>
             </a>
-            <a href="#contact" class="btn-secondary">Contact Us</a>
+            <a href="#contact" class="btn-secondary py-4 px-10 text-base">Book a Consultant</a>
           </div>
         </div>
 
@@ -133,26 +132,28 @@
         <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-100 text-slate-800 text-[10px] font-bold uppercase tracking-widest mb-8 fade-in-up">
             Our Journey
         </div>
-        <div class="grid lg:grid-cols-[1fr_400px] gap-16 items-start">
+        <div class="grid lg:grid-cols-[1fr_450px] gap-12 lg:gap-24 items-start">
             <div class="fade-in-up">
-                <h2 class="text-4xl md:text-5xl lg:text-5xl font-display font-bold mb-8 text-brand-navy leading-[1.15]">Crafting the <span class="text-brand-gold">Future</span><br>of Digital Africa.</h2>
-                <p class="text-slate-600 mb-6 text-base md:text-lg leading-relaxed">Founded in 2023, Sardauna Tech Lab began as an independent freelance initiative and has since grown into a structured, registered technology company.</p>
-                <p class="text-slate-600 mb-10 md:mb-12 text-base md:text-lg leading-relaxed">The company is dedicated to solving real business challenges by helping small and medium enterprises transition from manual operations to efficient, automated systems.</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold mb-8 text-brand-navy leading-[1.15]">Crafting the <span class="text-brand-gold">Future</span><br>of Digital Africa.</h2>
+                <div class="space-y-6 text-slate-600 mb-12 text-base md:text-lg leading-relaxed max-w-2xl">
+                    <p>Founded in 2023, Sardauna Tech Lab began as an independent freelance initiative and has since grown into a structured, registered technology company.</p>
+                    <p>The company is dedicated to solving real business challenges by helping small and medium enterprises transition from manual operations to efficient, automated systems.</p>
+                </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-white border text-left border-slate-100 rounded-2xl p-6 shadow-sm">
-                        <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="rocket" class="w-5 h-5 text-brand-navy"></i>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 border-slate-100 hover:border-brand-gold/50">
+                        <div class="w-12 h-12 bg-brand-navy/5 text-brand-navy rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="rocket" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-brand-navy mb-2">Vision</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">To be the leading catalyst for digital transformation across Africa, empowering every SME with world-class technology.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Our Vision</h3>
+                        <p class="text-slate-500 text-[15px] leading-relaxed">To be the leading catalyst for digital transformation across Africa, empowering every SME with world-class technology.</p>
                     </div>
-                    <div class="bg-white border text-left border-slate-100 rounded-2xl p-6 shadow-sm">
-                        <div class="w-10 h-10 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="target" class="w-5 h-5 text-brand-gold"></i>
+                    <div class="glass-card p-8 border-slate-100 hover:border-brand-gold/50">
+                        <div class="w-12 h-12 bg-brand-gold/10 text-brand-gold rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="target" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-brand-navy mb-2">Mission</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">To bridge the digital divide by providing accessible, innovative, and automated solutions that drive business growth.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Our Mission</h3>
+                        <p class="text-slate-500 text-[15px] leading-relaxed">To bridge the digital divide by providing accessible, innovative, and automated solutions that drive business growth.</p>
                     </div>
                 </div>
             </div>
@@ -205,36 +206,36 @@
           <div class="h-1 bg-brand-gold mx-auto mt-6 rounded-full w-20"></div>
         </div>
         
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 fade-in-up">
-            <div class="bg-white border text-left border-slate-100 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-sm">
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center mb-3 md:mb-4">
-                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 fade-in-up">
+            <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4 ring-4 ring-brand-gold/5">
+                    <i data-lucide="map-pin" class="w-6 h-6"></i>
                 </div>
-                <span class="text-[10px] font-bold text-brand-navy uppercase tracking-widest">Local Expertise</span>
+                <span class="text-xs font-bold text-brand-navy uppercase tracking-widest leading-tight">Local<br>Expertise</span>
             </div>
-            <div class="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-                <div class="w-12 h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center mb-4">
-                    <i data-lucide="cpu" class="w-5 h-5"></i>
+            <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4 ring-4 ring-brand-gold/5">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
                 </div>
-                <span class="text-[10px] font-bold text-brand-navy uppercase tracking-widest">Innovative Tech</span>
+                <span class="text-xs font-bold text-brand-navy uppercase tracking-widest leading-tight">Innovative<br>Tech</span>
             </div>
-            <div class="bg-white border border-slate-100 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-sm">
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center mb-3 md:mb-4">
-                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4 ring-4 ring-brand-gold/5">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
                 </div>
-                <span class="text-[10px] font-bold text-brand-navy uppercase tracking-widest">Reliable Delivery</span>
+                <span class="text-xs font-bold text-brand-navy uppercase tracking-widest leading-tight">Reliable<br>Delivery</span>
             </div>
-            <div class="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-                <div class="w-12 h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center mb-4">
-                    <i data-lucide="rocket" class="w-5 h-5"></i>
+            <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4 ring-4 ring-brand-gold/5">
+                    <i data-lucide="rocket" class="w-6 h-6"></i>
                 </div>
-                <span class="text-[10px] font-bold text-brand-navy uppercase tracking-widest">Sustainable Growth</span>
+                <span class="text-xs font-bold text-brand-navy uppercase tracking-widest leading-tight">Sustainable<br>Growth</span>
             </div>
-            <div class="bg-white border border-slate-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm">
-                <div class="w-12 h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center mb-4">
-                    <i data-lucide="zap" class="w-5 h-5"></i>
+            <div class="glass-card p-6 flex flex-col items-center justify-center text-center col-span-2 sm:col-span-1">
+                <div class="w-12 h-12 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4 ring-4 ring-brand-gold/5">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
                 </div>
-                <span class="text-[10px] font-bold text-brand-navy uppercase tracking-widest">Impact-Driven</span>
+                <span class="text-xs font-bold text-brand-navy uppercase tracking-widest leading-tight">Impact<br>Driven</span>
             </div>
         </div>
       </div>

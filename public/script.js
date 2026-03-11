@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         services.forEach((service, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
             const html = `
-                <div class="bg-white border border-slate-100 rounded-2xl p-10 flex flex-col items-center text-center justify-center shadow-sm hover:shadow-md transition-shadow fade-in-up ${delayClass}">
-                    <div class="w-14 h-14 bg-brand-gold/10 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="${service.icon}" class="w-7 h-7 text-brand-gold"></i>
+                <div class="glass-card p-10 flex flex-col items-center text-center justify-center fade-in-up ${delayClass}">
+                    <div class="w-16 h-16 bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-brand-gold/20">
+                        <i data-lucide="${service.icon}" class="w-8 h-8 text-brand-gold"></i>
                     </div>
-                    <h3 class="text-[17px] font-bold text-brand-navy">${service.title}</h3>
+                    <h3 class="text-lg font-bold text-brand-navy leading-snug">${service.title}</h3>
                 </div>
             `;
             servicesGrid.insertAdjacentHTML('beforeend', html);
@@ -83,12 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 : `<i data-lucide="users" class="w-10 h-10 text-slate-400"></i>`;
 
             const html = `
-                <div class="glass-card p-6 text-center hover:-translate-y-2 transition-transform duration-300 fade-in-up ${delayClass}">
-                    <div class="w-24 h-24 bg-slate-100 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-brand-gold/20 overflow-hidden hover:scale-110 transition-transform duration-300 cursor-pointer">
+                <div class="glass-card p-8 text-center fade-in-up ${delayClass}">
+                    <div class="w-28 h-28 bg-slate-50 rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-white shadow-md overflow-hidden hover:scale-105 transition-transform duration-500 cursor-pointer">
                         ${avatarContent}
                     </div>
-                    <h4 class="text-lg font-bold text-brand-navy">${member.name}</h4>
-                    <p class="text-brand-gold text-sm font-medium">${member.role}</p>
+                    <h4 class="text-xl font-bold text-brand-navy mb-1">${member.name}</h4>
+                    <p class="text-brand-gold text-sm font-semibold uppercase tracking-wider">${member.role}</p>
                 </div>
             `;
             teamGrid.insertAdjacentHTML('beforeend', html);
@@ -105,14 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         products.forEach((product, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
-            const badgeClass = 'bg-brand-gold/20 text-brand-gold-dark';
             const html = `
-                <div class="bg-white border border-slate-100 rounded-2xl p-8 flex flex-col shadow-sm hover:shadow-md transition-shadow fade-in-up ${delayClass}">
+                <div class="glass-card p-8 flex flex-col fade-in-up ${delayClass}">
                     <div class="flex justify-between items-start mb-6 gap-4">
-                        <h3 class="text-lg font-bold text-brand-navy flex-1 leading-tight">${product.title}</h3>
-                        <span class="px-2 py-1 text-[10px] font-bold uppercase rounded ${badgeClass} shrink-0">${product.badge}</span>
+                        <h3 class="text-xl font-bold text-brand-navy flex-1 leading-tight">${product.title}</h3>
+                        <span class="px-3 py-1 text-[10px] font-bold uppercase rounded-full bg-brand-gold/10 text-brand-gold-dark border border-brand-gold/20 shrink-0">${product.badge}</span>
                     </div>
-                    <p class="text-slate-500 text-[15px] leading-relaxed">${product.desc}</p>
+                    <p class="text-slate-500 text-base leading-relaxed">${product.desc}</p>
                 </div>
             `;
             productsGrid.insertAdjacentHTML('beforeend', html);
@@ -127,18 +126,19 @@ document.addEventListener('DOMContentLoaded', () => {
         blogs.forEach((blog, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
             const html = `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 fade-in-up ${delayClass} flex flex-col group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="${blog.image}" alt="${blog.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="glass-card overflow-hidden fade-in-up ${delayClass} flex flex-col group p-0">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="${blog.image}" alt="${blog.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <div class="p-6 flex flex-col flex-1 text-left">
-                        <div class="flex items-center gap-4 text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-3">
-                            <span class="flex items-center gap-1"><i data-lucide="user" class="w-3 h-3"></i> ${blog.author}</span>
-                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> ${blog.date}</span>
+                    <div class="p-8 flex flex-col flex-1 text-left">
+                        <div class="flex items-center gap-4 text-[11px] font-bold text-brand-gold uppercase tracking-widest mb-4">
+                            <span class="flex items-center gap-1.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> ${blog.author}</span>
+                            <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> ${blog.date}</span>
                         </div>
-                        <h3 class="text-[17px] font-bold text-brand-navy leading-snug mb-5">${blog.title}</h3>
-                        <a href="#" class="mt-auto text-sm font-semibold text-brand-navy flex items-center gap-1 group-hover:text-brand-gold transition-colors">
-                            Read Article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <h3 class="text-xl font-bold text-brand-navy leading-tight mb-6 group-hover:text-brand-gold transition-colors">${blog.title}</h3>
+                        <a href="#" class="mt-auto text-sm font-bold text-brand-navy flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Read Full Insight <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
