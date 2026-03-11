@@ -147,6 +147,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function renderPartners(partners) {
+        const partnersGrid = document.getElementById('partners-grid');
+        if (!partnersGrid || !partners || partners.length === 0) return;
+        partnersGrid.innerHTML = '';
+
+        partners.forEach((partner) => {
+            const content = partner.image
+                ? `<img src="${partner.image}" alt="${partner.name}" class="h-12 md:h-16 object-contain">`
+                : `<div class="text-lg md:text-xl font-display font-bold text-brand-navy text-center">${partner.name}</div>`;
+
+            partnersGrid.insertAdjacentHTML('beforeend', content);
+        });
+    }
+
     // Fetch Content from CMS JSON API
     async function fetchCMSContent() {
         try {
@@ -157,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderProducts(data.products || []);
                 renderBlog(data.blogs || []);
                 renderTeam(data.team || []);
+                renderPartners(data.partners || []);
             } else {
                 console.error("Failed to load CMS content. Falling back to empty arrays.");
                 renderServices([]); renderProducts([]); renderBlog([]); renderTeam([]);
