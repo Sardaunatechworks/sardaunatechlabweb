@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!servicesGrid) return;
         servicesGrid.innerHTML = '';
 
+        if (!Array.isArray(services)) services = [];
         services.forEach((service, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
             const html = `
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!teamGrid) return;
         teamGrid.innerHTML = '';
 
+        if (!Array.isArray(team)) team = [];
         team.forEach((member, idx) => {
             const delayClass = `delay-${(idx % 4) * 100}`;
 
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!productsGrid) return;
         productsGrid.innerHTML = '';
 
+        if (!Array.isArray(products)) products = [];
         products.forEach((product, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
             const html = `
@@ -123,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!blogGrid) return;
         blogGrid.innerHTML = '';
 
+        if (!Array.isArray(blogs)) blogs = [];
         blogs.forEach((blog, idx) => {
             const delayClass = `delay-${(idx % 3) * 100}`;
             const html = `
